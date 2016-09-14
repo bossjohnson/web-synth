@@ -3,15 +3,17 @@ app.directive('keyboard', function() {
         templateUrl: 'partials/keyboard.html',
         restrict: '',
         scope: {},
-        controller: function() {
-            console.log('ok');
-        }
+        controller: mainCtrl
     };
 });
 
 app.directive('keyboardKey', function() {
     return {
         restrict: 'E',
-        scope: {}
+        scope: {
+            play: '=',
+            pitch: '='
+        },
+        controller: keyCtrl
     };
 });

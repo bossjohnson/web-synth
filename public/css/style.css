@@ -56,4 +56,7 @@ keyboard {
   .blackKey:nth-of-type(5) {
     left: 82.14286%; }
 
+keyboard-key:hover {
+  cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */
