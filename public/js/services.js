@@ -5,7 +5,7 @@ function pitchService($rootScope) {
     this.createPitch = function(pitch) {
         var osc = $rootScope.audioContext.createOscillator();
         var a = Math.pow(2, 1 / 12); // Constant used in calculating note frequency
-        osc.frequency.value = 440 * Math.pow(a, Math.floor(pitch));
+        osc.frequency.value = 440 * Math.pow(a, pitch);
         return osc;
     };
 
@@ -21,8 +21,12 @@ function pitchService($rootScope) {
         return notes;
     }
 
-    this.play = function(pitch) {
+    this.play = function(gain) {
+      gain.gain.value = 1;
+    }
 
+    this.stop = function (gain) {
+      gain.gain.value = 0;
     }
 }
 pitchService.$inject = ['$rootScope']

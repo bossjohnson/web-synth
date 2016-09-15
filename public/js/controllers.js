@@ -12,20 +12,12 @@ app.controller('keyCtrl', keyCtrl);
 
 function keyCtrl($scope, $rootScope, pitchService) {
 
-    var ctx = $rootScope.audioContext;
     var osc = pitchService.createPitch($scope.pitch);
     var gain = $rootScope.audioContext.createGain();
     gain.gain.value = 0;
     gain.connect($rootScope.audioContext.destination);
     osc.connect(gain);
     osc.start();
-
-    $scope.play = function() {
-        gain.gain.value = 1;
-    };
-
-    $scope.stop = function() {
-        gain.gain.value = 0;
-    };
+    $scope.gain = gain;
 }
 keyCtrl.$inject = ['$scope', '$rootScope', 'pitchService'];
