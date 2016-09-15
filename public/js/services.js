@@ -19,7 +19,7 @@ function pitchService($rootScope) {
                 notes.push(pitches[j] + i);
             }
         }
-        return notes
+        return notes;
     }
 }
 pitchService.$inject = ['$rootScope']
