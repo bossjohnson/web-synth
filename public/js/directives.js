@@ -14,6 +14,10 @@ app.directive('keyboardKey', function() {
             play: '=',
             pitch: '='
         },
-        controller: keyCtrl
+        controller: keyCtrl,
+        link: function(scope, element, attrs) {
+            element.on('mousedown', scope.play);
+            element.on('mouseup', scope.stop);
+        }
     };
 });

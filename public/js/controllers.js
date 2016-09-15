@@ -1,21 +1,24 @@
 app.controller('mainCtrl', mainCtrl);
 
-function mainCtrl($rootScope) {
+function mainCtrl($rootScope, pitchService) {
     $rootScope.audioContext = new window.AudioContext();
-    var gain = $rootScope.audioContext.createGain();
+    $rootScope.notes = pitchService.allNotes();
+
+    // var gain = $rootScope.audioContext.createGain();
 }
-mainCtrl.$inject = ['$rootScope'];
+mainCtrl.$inject = ['$rootScope', 'pitchService'];
 
 app.controller('keyCtrl', keyCtrl);
 
 function keyCtrl($scope, $rootScope, pitchService) {
     var ctx = $rootScope.audioContext;
-    $scope.play = function(pitch) {
-        // console.log('played' + pitch);
-        // console.log(osc);
+    $scope.play = function() {
         var osc = pitchService.createPitch($scope.pitch);
+        $scope.osc = osc;
         osc.start();
-        osc.stop(ctx.currentTime + .5);
     }
+    $scope.stop = function() {
+        $scope.osc.stop();
+    };
 }
 keyCtrl.$inject = ['$scope', '$rootScope', 'pitchService'];
