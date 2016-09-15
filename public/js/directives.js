@@ -34,25 +34,30 @@ app.directive('keyListener', function() {
                         var key = keyboard.find('keyboard-key')[6];
                         angular.element(key).triggerHandler('mousedown');
                         break;
-                        // black keys
-                    case 87:
+                    case 75:
                         var key = keyboard.find('keyboard-key')[7];
                         angular.element(key).triggerHandler('mousedown');
                         break;
-                    case 69:
+
+                        // black keys
+                    case 87:
                         var key = keyboard.find('keyboard-key')[8];
                         angular.element(key).triggerHandler('mousedown');
                         break;
-                    case 84:
+                    case 69:
                         var key = keyboard.find('keyboard-key')[9];
                         angular.element(key).triggerHandler('mousedown');
                         break;
-                    case 89:
+                    case 84:
                         var key = keyboard.find('keyboard-key')[10];
                         angular.element(key).triggerHandler('mousedown');
                         break;
-                    case 85:
+                    case 89:
                         var key = keyboard.find('keyboard-key')[11];
+                        angular.element(key).triggerHandler('mousedown');
+                        break;
+                    case 85:
+                        var key = keyboard.find('keyboard-key')[12];
                         angular.element(key).triggerHandler('mousedown');
                         break;
                     default:
@@ -89,25 +94,29 @@ app.directive('keyListener', function() {
                         var key = keyboard.find('keyboard-key')[6];
                         angular.element(key).triggerHandler('mouseup');
                         break;
-                        // black keys
-                    case 87:
+                    case 75:
                         var key = keyboard.find('keyboard-key')[7];
                         angular.element(key).triggerHandler('mouseup');
                         break;
-                    case 69:
+                        // black keys
+                    case 87:
                         var key = keyboard.find('keyboard-key')[8];
                         angular.element(key).triggerHandler('mouseup');
                         break;
-                    case 84:
+                    case 69:
                         var key = keyboard.find('keyboard-key')[9];
                         angular.element(key).triggerHandler('mouseup');
                         break;
-                    case 89:
+                    case 84:
                         var key = keyboard.find('keyboard-key')[10];
                         angular.element(key).triggerHandler('mouseup');
                         break;
-                    case 85:
+                    case 89:
                         var key = keyboard.find('keyboard-key')[11];
+                        angular.element(key).triggerHandler('mouseup');
+                        break;
+                    case 85:
+                        var key = keyboard.find('keyboard-key')[12];
                         angular.element(key).triggerHandler('mouseup');
                         break;
                     default:

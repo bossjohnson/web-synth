@@ -40,11 +40,12 @@ keyboard {
   position: relative;
   left: 25vw;
   width: 50vw;
-  display: flex; }
+  display: flex;
+  border: 20px outset pink; }
 
 .whiteKey {
   position: relative;
-  width: 14.28571%;
+  width: 12.5%;
   height: 200px;
   background-color: white;
   border: 2px solid black;
@@ -65,7 +66,7 @@ keyboard {
   left: 0; }
   .blackKeyRow .blackKey {
     position: absolute;
-    width: 7.14286%;
+    width: 6.25%;
     height: 125px;
     background-color: black;
     border: 2px solid gray;
@@ -77,15 +78,15 @@ keyboard {
     .blackKeyRow .blackKey.playing {
       background-color: blue; }
     .blackKeyRow .blackKey:first-of-type {
-      left: 10.71429%; }
+      left: 9.375%; }
     .blackKeyRow .blackKey:nth-of-type(2) {
-      left: 25%; }
+      left: 21.875%; }
     .blackKeyRow .blackKey:nth-of-type(3) {
-      left: 53.57143%; }
+      left: 46.875%; }
     .blackKeyRow .blackKey:nth-of-type(4) {
-      left: 67.85714%; }
+      left: 59.375%; }
     .blackKeyRow .blackKey:nth-of-type(5) {
-      left: 82.14286%; }
+      left: 71.875%; }
 
 keyboard-key:hover {
   cursor: pointer; }
